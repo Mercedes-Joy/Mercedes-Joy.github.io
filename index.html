@@ -38,9 +38,7 @@
 	</head>
 	<body>
 		<div id="info">
-			<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> -
-			STL loader test by <a href="https://github.com/aleeper">aleeper</a>. PR2 head from <a href="http://www.ros.org/wiki/pr2_description">www.ros.org</a>
-		</div>
+			<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> 
 
 		<script src="../build/three.js"></script>
 
@@ -91,7 +89,7 @@
 				// ASCII file
 
 				var loader = new THREE.STLLoader();
-				loader.load( '5hub_print.stl', function ( geometry ) {
+				loader.load( './5hub_print.stl', function ( geometry ) {
 
 					var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 					var mesh = new THREE.Mesh( geometry, material );
@@ -112,7 +110,7 @@
 
 				var material = new THREE.MeshPhongMaterial( { color: 0xAAAAAA, specular: 0x111111, shininess: 200 } );
 
-				loader.load( '5hub_print.stl', function ( geometry ) {
+				loader.load( './5hub_print.stl', function ( geometry ) {
 
 					var mesh = new THREE.Mesh( geometry, material );
 
@@ -127,7 +125,7 @@
 
 				} );
 
-				loader.load( '5hub_print.stl', function ( geometry ) {
+				loader.load( './5hub_print.stl', function ( geometry ) {
 
 					var mesh = new THREE.Mesh( geometry, material );
 
@@ -143,7 +141,7 @@
 				} );
 
 				// Colored binary STL
-				loader.load( '5hub_print.stl', function ( geometry ) {
+				loader.load( './5hub_print.stl', function ( geometry ) {
 
 					var meshMaterial = material;
 					if (geometry.hasColors) {
@@ -252,4 +250,3 @@
 		</script>
 	</body>
 </html>
-
